@@ -18,8 +18,5 @@
   },
   "volta": {
     "node": "16.19.1"
-  },
-  "dependencies": {
-    "ethereum-waffle": "^4.0.10"
   }
 }
