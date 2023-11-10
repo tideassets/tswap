@@ -2,9 +2,9 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pancakeswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
-import '@pancakeswap/v3-core/contracts/libraries/FixedPoint128.sol';
-import '@pancakeswap/v3-core/contracts/libraries/FullMath.sol';
+import '@tideswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
+import '@tideswap/v3-core/contracts/libraries/FixedPoint128.sol';
+import '@tideswap/v3-core/contracts/libraries/FullMath.sol';
 
 import './interfaces/INonfungiblePositionManager.sol';
 import './interfaces/INonfungibleTokenPositionDescriptor.sol';

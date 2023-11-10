@@ -2,8 +2,8 @@ import bn from 'bignumber.js'
 import { Contract, ContractFactory, utils, BigNumber } from 'ethers'
 import { ethers, upgrades, network } from 'hardhat'
 import { linkLibraries } from '../util/linkLibraries'
-import { tryVerify } from '@pancakeswap/common/verify'
-import { configs } from '@pancakeswap/common/config'
+import { tryVerify } from '@tideswap/common/verify'
+import { configs } from '@tideswap/common/config'
 import fs from 'fs'
 
 type ContractJson = { abi: any; bytecode: string }
@@ -62,7 +62,7 @@ async function main() {
     throw new Error(`No config found for network ${networkName}`)
   }
 
-  const deployedContracts = await import(`@pancakeswap/v3-core/deployments/${networkName}.json`)
+  const deployedContracts = await import(`@tideswap/v3-core/deployments/${networkName}.json`)
 
   const pancakeV3PoolDeployer_address = deployedContracts.PancakeV3PoolDeployer
   const pancakeV3Factory_address = deployedContracts.PancakeV3Factory
@@ -126,7 +126,7 @@ async function main() {
     artifacts.NonfungibleTokenPositionDescriptorOffChain.bytecode,
     owner
   )
-  const baseTokenUri = 'https://nft.pancakeswap.com/v3/'
+  const baseTokenUri = 'https://nft.tideswap.com/v3/'
   const nonfungibleTokenPositionDescriptor = await upgrades.deployProxy(NonfungibleTokenPositionDescriptor, [
     baseTokenUri,
   ])

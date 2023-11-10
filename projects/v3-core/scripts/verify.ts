@@ -1,9 +1,9 @@
-import { verifyContract } from '@pancakeswap/common/verify'
-import { sleep } from '@pancakeswap/common/sleep'
+import { verifyContract } from '@tideswap/common/verify'
+import { sleep } from '@tideswap/common/sleep'
 
 async function main() {
   const networkName = network.name
-  const deployedContracts = await import(`@pancakeswap/v3-core/deployments/${networkName}.json`)
+  const deployedContracts = await import(`@tideswap/v3-core/deployments/${networkName}.json`)
 
   // Verify PancakeV3PoolDeployer
   console.log('Verify PancakeV3PoolDeployer')

@@ -2,9 +2,9 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pancakeswap/v3-core/contracts/interfaces/IPancakeV3Factory.sol';
-import '@pancakeswap/v3-core/contracts/interfaces/callback/IPancakeV3MintCallback.sol';
-import '@pancakeswap/v3-core/contracts/libraries/TickMath.sol';
+import '@tideswap/v3-core/contracts/interfaces/IPancakeV3Factory.sol';
+import '@tideswap/v3-core/contracts/interfaces/callback/IPancakeV3MintCallback.sol';
+import '@tideswap/v3-core/contracts/libraries/TickMath.sol';
 
 import '../libraries/PoolAddress.sol';
 import '../libraries/CallbackValidation.sol';

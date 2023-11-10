@@ -2,8 +2,8 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pancakeswap/v3-core/contracts/interfaces/callback/IPancakeV3FlashCallback.sol';
-import '@pancakeswap/v3-core/contracts/libraries/LowGasSafeMath.sol';
+import '@tideswap/v3-core/contracts/interfaces/callback/IPancakeV3FlashCallback.sol';
+import '@tideswap/v3-core/contracts/libraries/LowGasSafeMath.sol';
 
 import '../base/PeripheryPayments.sol';
 import '../base/PeripheryImmutableState.sol';

@@ -3,14 +3,14 @@ import { ethers, upgrades } from "hardhat";
 import { time, mineUpTo, reset } from "@nomicfoundation/hardhat-network-helpers";
 import { TickMath } from "@uniswap/v3-sdk";
 
-import PancakeV3PoolDeployerArtifact from "@pancakeswap/v3-core/artifacts/contracts/PancakeV3PoolDeployer.sol/PancakeV3PoolDeployer.json";
-import PancakeV3FactoryArtifact from "@pancakeswap/v3-core/artifacts/contracts/PancakeV3Factory.sol/PancakeV3Factory.json";
-// import PancakeV3FactoryOwnerArtifact from "@pancakeswap/v3-core/artifacts/contracts/PancakeV3FactoryOwner.sol/PancakeV3FactoryOwner.json";
-import PancakeV3SwapRouterArtifact from "@pancakeswap/v3-periphery/artifacts/contracts/SwapRouter.sol/SwapRouter.json";
-import NftDescriptorOffchainArtifact from "@pancakeswap/v3-periphery/artifacts/contracts/NonfungibleTokenPositionDescriptorOffChain.sol/NonfungibleTokenPositionDescriptorOffChain.json";
-import NonfungiblePositionManagerArtifact from "@pancakeswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
-import PancakeV3LmPoolDeployerArtifact from "@pancakeswap/v3-lm-pool/artifacts/contracts/PancakeV3LmPoolDeployer.sol/PancakeV3LmPoolDeployer.json";
-import TestLiquidityAmountsArtifact from "@pancakeswap/v3-periphery/artifacts/contracts/test/LiquidityAmountsTest.sol/LiquidityAmountsTest.json";
+import PancakeV3PoolDeployerArtifact from "@tideswap/v3-core/artifacts/contracts/PancakeV3PoolDeployer.sol/PancakeV3PoolDeployer.json";
+import PancakeV3FactoryArtifact from "@tideswap/v3-core/artifacts/contracts/PancakeV3Factory.sol/PancakeV3Factory.json";
+// import PancakeV3FactoryOwnerArtifact from "@tideswap/v3-core/artifacts/contracts/PancakeV3FactoryOwner.sol/PancakeV3FactoryOwner.json";
+import PancakeV3SwapRouterArtifact from "@tideswap/v3-periphery/artifacts/contracts/SwapRouter.sol/SwapRouter.json";
+import NftDescriptorOffchainArtifact from "@tideswap/v3-periphery/artifacts/contracts/NonfungibleTokenPositionDescriptorOffChain.sol/NonfungibleTokenPositionDescriptorOffChain.json";
+import NonfungiblePositionManagerArtifact from "@tideswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
+import PancakeV3LmPoolDeployerArtifact from "@tideswap/v3-lm-pool/artifacts/contracts/PancakeV3LmPoolDeployer.sol/PancakeV3LmPoolDeployer.json";
+import TestLiquidityAmountsArtifact from "@tideswap/v3-periphery/artifacts/contracts/test/LiquidityAmountsTest.sol/LiquidityAmountsTest.json";
 
 import ERC20MockArtifact from "./ERC20Mock.json";
 import CakeTokenArtifact from "./CakeToken.json";
@@ -54,7 +54,7 @@ describe("MasterChefV3", function () {
     // const NonfungibleTokenPositionDescriptor = await ethers.getContractFactoryFromArtifact(
     //   NftDescriptorOffchainArtifact
     // );
-    // const baseTokenUri = "https://nft.pancakeswap.com/v3/";
+    // const baseTokenUri = "https://nft.tideswap.com/v3/";
     // const nonfungibleTokenPositionDescriptor = await upgrades.deployProxy(NonfungibleTokenPositionDescriptor, [
     //   baseTokenUri,
     // ]);

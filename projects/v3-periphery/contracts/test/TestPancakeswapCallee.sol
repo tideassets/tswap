@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity =0.7.6;
 
-import '@pancakeswap/v3-core/contracts/interfaces/callback/IPancakeV3SwapCallback.sol';
-import '@pancakeswap/v3-core/contracts/libraries/SafeCast.sol';
-import '@pancakeswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
+import '@tideswap/v3-core/contracts/interfaces/callback/IPancakeV3SwapCallback.sol';
+import '@tideswap/v3-core/contracts/libraries/SafeCast.sol';
+import '@tideswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
 contract TestPancakeswapCallee is IPancakeV3SwapCallback {

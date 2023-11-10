@@ -1,5 +1,5 @@
 {
-  "extends": "@pancakeswap/eslint-config-pancake",
+  "extends": "@tideswap/eslint-config-pancake",
   "rules": {
     "import/no-extraneous-dependencies": 0
   }

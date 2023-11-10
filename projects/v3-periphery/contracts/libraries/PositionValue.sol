@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.6.8 <0.8.0;
 
-import '@pancakeswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
-import '@pancakeswap/v3-core/contracts/libraries/FixedPoint128.sol';
-import '@pancakeswap/v3-core/contracts/libraries/TickMath.sol';
-import '@pancakeswap/v3-core/contracts/libraries/Tick.sol';
+import '@tideswap/v3-core/contracts/interfaces/IPancakeV3Pool.sol';
+import '@tideswap/v3-core/contracts/libraries/FixedPoint128.sol';
+import '@tideswap/v3-core/contracts/libraries/TickMath.sol';
+import '@tideswap/v3-core/contracts/libraries/Tick.sol';
 import '../interfaces/INonfungiblePositionManager.sol';
 import './LiquidityAmounts.sol';
 import './PoolAddress.sol';

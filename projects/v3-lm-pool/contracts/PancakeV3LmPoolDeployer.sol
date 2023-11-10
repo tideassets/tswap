@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.7.6;
 
-import '@pancakeswap/v3-core/contracts/interfaces/IPancakeV3Factory.sol';
-import '@pancakeswap/v3-periphery/contracts/interfaces/INonfungiblePositionManager.sol';
+import '@tideswap/v3-core/contracts/interfaces/IPancakeV3Factory.sol';
+import '@tideswap/v3-periphery/contracts/interfaces/INonfungiblePositionManager.sol';
 
 import './PancakeV3LmPool.sol';
 

@@ -2,7 +2,7 @@
 pragma solidity >=0.7.5;
 pragma abicoder v2;
 
-import '@pancakeswap/v3-core/contracts/interfaces/callback/IPancakeV3SwapCallback.sol';
+import '@tideswap/v3-core/contracts/interfaces/callback/IPancakeV3SwapCallback.sol';
 
 /// @title Router token swapping functionality
 /// @notice Functions for swapping tokens via PancakeSwap V3
