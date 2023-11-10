@@ -14,7 +14,7 @@ import './PeripheryPayments.sol';
 import './PeripheryImmutableState.sol';
 
 /// @title Liquidity management functions
-/// @notice Internal functions for safely managing liquidity in PancakeSwap V3
+/// @notice Internal functions for safely managing liquidity in TideSwap V3
 abstract contract LiquidityManagement is IPancakeV3MintCallback, PeripheryImmutableState, PeripheryPayments {
     struct MintCallbackData {
         PoolAddress.PoolKey poolKey;

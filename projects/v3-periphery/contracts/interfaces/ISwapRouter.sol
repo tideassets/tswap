@@ -5,7 +5,7 @@ pragma abicoder v2;
 import '@tideswap/v3-core/contracts/interfaces/callback/IPancakeV3SwapCallback.sol';
 
 /// @title Router token swapping functionality
-/// @notice Functions for swapping tokens via PancakeSwap V3
+/// @notice Functions for swapping tokens via TideSwap V3
 interface ISwapRouter is IPancakeV3SwapCallback {
     struct ExactInputSingleParams {
         address tokenIn;

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.20;
 
 interface ILMPool {
     function updatePosition(int24 tickLower, int24 tickUpper, int128 liquidityDelta) external;

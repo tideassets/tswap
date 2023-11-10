@@ -13,7 +13,7 @@ import '../libraries/TransferHelper.sol';
 import '../interfaces/ISwapRouter.sol';
 
 /// @title Flash contract implementation
-/// @notice An example contract using the PancakeSwap V3 flash function
+/// @notice An example contract using the TideSwap V3 flash function
 contract PairFlash is IPancakeV3FlashCallback, PeripheryPayments {
     using LowGasSafeMath for uint256;
     using LowGasSafeMath for int256;

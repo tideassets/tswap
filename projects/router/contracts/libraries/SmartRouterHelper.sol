@@ -180,7 +180,7 @@ library SmartRouterHelper {
     }
 
     /// @notice Deterministically computes the pool address given the deployer and PoolKey
-    /// @param deployer The PancakeSwap V3 deployer contract address
+    /// @param deployer The TideSwap V3 deployer contract address
     /// @param key The PoolKey
     /// @return pool The contract address of the V3 pool
     function computeAddress(address deployer, PoolKey memory key) public pure returns (address pool) {
@@ -209,8 +209,8 @@ library SmartRouterHelper {
         return IPancakeV3Pool(computeAddress(deployer, getPoolKey(tokenA, tokenB, fee)));
     }
 
-    /// @notice Returns the address of a valid PancakeSwap V3 Pool
-    /// @param deployer The contract address of the PancakeSwap V3 deployer
+    /// @notice Returns the address of a valid TideSwap V3 Pool
+    /// @param deployer The contract address of the TideSwap V3 deployer
     /// @param tokenA The contract address of either token0 or token1
     /// @param tokenB The contract address of the other token
     /// @param fee The fee collected upon every swap in the pool, denominated in hundredths of a bip
@@ -224,8 +224,8 @@ library SmartRouterHelper {
         return verifyCallback(deployer, getPoolKey(tokenA, tokenB, fee));
     }
 
-    /// @notice Returns the address of a valid PancakeSwap V3 Pool
-    /// @param deployer The contract address of the PancakeSwap V3 deployer
+    /// @notice Returns the address of a valid TideSwap V3 Pool
+    /// @param deployer The contract address of the TideSwap V3 deployer
     /// @param poolKey The identifying key of the V3 pool
     /// @return pool The V3 pool contract address
     function verifyCallback(address deployer, PoolKey memory poolKey)

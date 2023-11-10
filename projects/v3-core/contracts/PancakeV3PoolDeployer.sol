@@ -37,7 +37,7 @@ contract PancakeV3PoolDeployer is IPancakeV3PoolDeployer {
 
     /// @dev Deploys a pool with the given parameters by transiently setting the parameters storage slot and then
     /// clearing it after deploying the pool.
-    /// @param factory The contract address of the PancakeSwap V3 factory
+    /// @param factory The contract address of the TideSwap V3 factory
     /// @param token0 The first token of the pool by address sort order
     /// @param token1 The second token of the pool by address sort order
     /// @param fee The fee collected upon every swap in the pool, denominated in hundredths of a bip

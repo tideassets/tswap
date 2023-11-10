@@ -5,8 +5,8 @@ import './interfaces/IPancakeV3Factory.sol';
 import "./interfaces/IPancakeV3PoolDeployer.sol";
 import './interfaces/IPancakeV3Pool.sol';
 
-/// @title Canonical PancakeSwap V3 factory
-/// @notice Deploys PancakeSwap V3 pools and manages ownership and control over pool protocol fees
+/// @title Canonical TideSwap V3 factory
+/// @notice Deploys TideSwap V3 pools and manages ownership and control over pool protocol fees
 contract PancakeV3Factory is IPancakeV3Factory {
     /// @inheritdoc IPancakeV3Factory
     address public override owner;

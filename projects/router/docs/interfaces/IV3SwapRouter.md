@@ -2,7 +2,7 @@
 
 ## IV3SwapRouter
 
-Functions for swapping tokens via PancakeSwap V3
+Functions for swapping tokens via TideSwap V3
 
 ### ExactInputSingleParams
 

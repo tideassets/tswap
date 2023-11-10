@@ -2,7 +2,7 @@
 
 ## LiquidityManagement
 
-Internal functions for safely managing liquidity in PancakeSwap V3
+Internal functions for safely managing liquidity in TideSwap V3
 
 ### MintCallbackData
 

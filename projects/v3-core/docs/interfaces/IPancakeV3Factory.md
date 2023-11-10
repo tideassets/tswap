@@ -2,7 +2,7 @@
 
 ## IPancakeV3Factory
 
-The PancakeSwap V3 Factory facilitates creation of PancakeSwap V3 pools and control over the protocol fees
+The TideSwap V3 Factory facilitates creation of TideSwap V3 pools and control over the protocol fees
 
 ### TickSpacingExtraInfo
 

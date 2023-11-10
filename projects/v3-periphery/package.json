@@ -1,6 +1,6 @@
 {
   "name": "@tideswap/v3-periphery",
-  "description": "🎚 Peripheral smart contracts for interacting with PancakeSwap V3",
+  "description": "🎚 Peripheral smart contracts for interacting with TideSwap V3",
   "license": "GPL-2.0-or-later",
   "publishConfig": {
     "access": "public"
@@ -28,12 +28,13 @@
     "@openzeppelin/contracts-upgradeable": "3.4.2-solc-0.7",
     "@uniswap/lib": "^4.0.1-alpha",
     "@uniswap/v2-core": "1.0.1",
-    "base64-sol": "1.0.1"
+    "base64-sol": "1.0.1",
+    "ethereum-waffle": "^4.0.10"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
     "@tideswap/v3-core": "*",
     "@typechain/ethers-v5": "^10.2.0",
@@ -41,7 +42,6 @@
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "decimal.js": "^10.2.1",
-    "ethereum-waffle": "^3.0.2",
     "ethers": "^5.0.8",
     "hardhat": "^2.6.8",
     "hardhat-typechain": "^0.3.5",

@@ -2,7 +2,7 @@
 
 ## V3SwapRouter
 
-Router for stateless execution of swaps against PancakeSwap V3
+Router for stateless execution of swaps against TideSwap V3
 
 ### SwapCallbackData
 

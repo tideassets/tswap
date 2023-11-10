@@ -23,7 +23,7 @@ contract PancakeV3LmPoolDeployer {
     }
 
     /// @dev Deploys a LmPool
-    /// @param pool The contract address of the PancakeSwap V3 pool
+    /// @param pool The contract address of the TideSwap V3 pool
     function deploy(IPancakeV3Pool pool) external onlyMasterChef returns (IPancakeV3LmPool lmPool) {
         lmPool = new PancakeV3LmPool(address(pool), masterChef, uint32(block.timestamp));
         IPancakeV3Factory(INonfungiblePositionManager(IMasterChefV3(masterChef).nonfungiblePositionManager()).factory()).setLmPool(address(pool), address(lmPool));

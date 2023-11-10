@@ -106,7 +106,7 @@ Deterministically computes the pool address given the deployer and PoolKey
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| deployer | address | The PancakeSwap V3 deployer contract address |
+| deployer | address | The TideSwap V3 deployer contract address |
 | key | struct SmartRouterHelper.PoolKey | The PoolKey |
 
 #### Return Values
@@ -129,13 +129,13 @@ _Returns the pool for the given token pair and fee. The pool contract may or may
 function verifyCallback(address deployer, address tokenA, address tokenB, uint24 fee) public view returns (contract IPancakeV3Pool pool)
 ```
 
-Returns the address of a valid PancakeSwap V3 Pool
+Returns the address of a valid TideSwap V3 Pool
 
 #### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| deployer | address | The contract address of the PancakeSwap V3 deployer |
+| deployer | address | The contract address of the TideSwap V3 deployer |
 | tokenA | address | The contract address of either token0 or token1 |
 | tokenB | address | The contract address of the other token |
 | fee | uint24 | The fee collected upon every swap in the pool, denominated in hundredths of a bip |
@@ -152,13 +152,13 @@ Returns the address of a valid PancakeSwap V3 Pool
 function verifyCallback(address deployer, struct SmartRouterHelper.PoolKey poolKey) public view returns (contract IPancakeV3Pool pool)
 ```
 
-Returns the address of a valid PancakeSwap V3 Pool
+Returns the address of a valid TideSwap V3 Pool
 
 #### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| deployer | address | The contract address of the PancakeSwap V3 deployer |
+| deployer | address | The contract address of the TideSwap V3 deployer |
 | poolKey | struct SmartRouterHelper.PoolKey | The identifying key of the V3 pool |
 
 #### Return Values

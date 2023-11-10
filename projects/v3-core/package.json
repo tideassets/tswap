@@ -1,6 +1,6 @@
 {
   "name": "@tideswap/v3-core",
-  "description": "🥞 Core smart contracts of PancakeSwap V3",
+  "description": "🥞 Core smart contracts of TideSwap V3",
   "license": "GPL-2.0-or-later",
   "publishConfig": {
     "access": "public"

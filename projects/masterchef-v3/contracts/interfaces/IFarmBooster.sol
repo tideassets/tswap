@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.20;
 
 interface IFarmBooster {
     function getUserMultiplier(uint256 _tokenId) external view returns (uint256);

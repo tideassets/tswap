@@ -2,7 +2,7 @@
 
 ## PairFlash
 
-An example contract using the PancakeSwap V3 flash function
+An example contract using the TideSwap V3 flash function
 
 ### swapRouter
 

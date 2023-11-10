@@ -2,7 +2,7 @@
 
 ## IV2SwapRouter
 
-Functions for swapping tokens via PancakeSwap V2
+Functions for swapping tokens via TideSwap V2
 
 ### swapExactTokensForTokens
 
