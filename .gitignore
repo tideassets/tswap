@@ -8,6 +8,7 @@ node_modules/
 **/coverage
 **/coverage.json
 **/.env
+**/yarn-error.log
 .idea
 .vscode
 .DS_Store

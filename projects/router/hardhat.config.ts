@@ -55,11 +55,11 @@ const eth: NetworkUserConfig = {
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
   networks: {
-    hardhat: {
-      forking: {
-        url: bscTestnet.url || '',
-      },
-    },
+    // hardhat: {
+    //   forking: {
+    //     url: bscTestnet.url || '',
+    //   },
+    // },
     ...(process.env.KEY_TESTNET && { bscTestnet }),
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),

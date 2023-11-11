@@ -18,5 +18,8 @@
   },
   "volta": {
     "node": "16.19.1"
+  },
+  "dependencies": {
+    "typescript": "^5.2.2"
   }
 }
