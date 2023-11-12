@@ -19,9 +19,9 @@ await $`yarn workspace @tideswap/v3-core run hardhat run scripts/deploy.ts --net
 
 await $`yarn workspace @tideswap/v3-periphery run hardhat run scripts/deploy2.ts --network ${network}`
 
-await $`yarn workspace @tideswap/smart-router run hardhat run scripts/deploy2.ts --network ${network}`
-
 await $`yarn workspace @tideswap/masterchef-v3 run hardhat run scripts/deploy2.ts --network ${network}`
+
+await $`yarn workspace @tideswap/smart-router run hardhat run scripts/deploy2.ts --network ${network}`
 
 await $`yarn workspace @tideswap/v3-lm-pool run hardhat run scripts/deploy2.ts --network ${network}`
 

@@ -13,10 +13,19 @@ async function main() {
 
   const v3DeployedContracts = await import(`@tideswap/v3-core/deployments/${networkName}.json`)
   const v3PeripheryDeployedContracts = await import(`@tideswap/v3-periphery/deployments/${networkName}.json`)
+  const v3MasterChefDeployedContracts = await import(`@tideswap/masterchef-v3/deployments/${networkName}.json`)
 
   const pancakeV3PoolDeployer_address = v3DeployedContracts.PancakeV3PoolDeployer
   const pancakeV3Factory_address = v3DeployedContracts.PancakeV3Factory
   const positionManager_address = v3PeripheryDeployedContracts.NonfungiblePositionManager
+  const stableFactory_address = v3MasterChefDeployedContracts.StableSwapFactory
+  const stableInfo_address = v3MasterChefDeployedContracts.StableSwapInfo
+
+  /** Factoryv2 */
+  console.log('Deploying Factoryv2...')
+  const FactoryV2 = await ethers.getContractFactory('PancakeFactory')
+  const factoryV2 = await FactoryV2.deploy("0x0000000000000000000000000000000000000000") // no fee handler
+  console.log('Factoryv2 deployed to:', factoryV2.address)
 
   /** SmartRouterHelper */
   console.log('Deploying SmartRouterHelper...')
@@ -33,12 +42,12 @@ async function main() {
     },
   })
   const smartRouter = await SmartRouter.deploy(
-    config.v2Factory,
+    factoryV2.address,
     pancakeV3PoolDeployer_address,
     pancakeV3Factory_address,
     positionManager_address,
-    config.stableFactory,
-    config.stableInfo,
+    stableFactory_address,
+    stableInfo_address,
     config.WNATIVE
   )
   console.log('SmartRouter deployed to:', smartRouter.address)
@@ -62,8 +71,8 @@ async function main() {
   const mixedRouteQuoterV1 = await MixedRouteQuoterV1.deploy(
     pancakeV3PoolDeployer_address,
     pancakeV3Factory_address,
-    config.v2Factory,
-    config.stableFactory,
+    factoryV2.address,
+    stableFactory_address,
     config.WNATIVE
   )
   console.log('MixedRouteQuoterV1 deployed to:', mixedRouteQuoterV1.address)
@@ -93,12 +102,13 @@ async function main() {
       SmartRouterHelper: smartRouterHelper.address,
     },
   })
-  const tokenValidator = await TokenValidator.deploy(config.v2Factory, positionManager_address)
+  const tokenValidator = await TokenValidator.deploy(factoryV2.address, positionManager_address)
   console.log('TokenValidator deployed to:', tokenValidator.address)
 
   // await tryVerify(tokenValidator, [config.v2Factory, positionManager_address])
 
   const contracts = {
+    FactoryV2: factoryV2.address,
     SmartRouter: smartRouter.address,
     SmartRouterHelper: smartRouterHelper.address,
     MixedRouteQuoterV1: mixedRouteQuoterV1.address,

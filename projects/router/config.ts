@@ -1,4 +1,9 @@
 export default {
+  feeHandlerV2: {
+    hardhat: "0x6725f303b657a9451d8ba641348b6761a6cc7a17",
+    bscTestnet: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+    goerli: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+  },
   factoryV2: {
     hardhat: "0x6725f303b657a9451d8ba641348b6761a6cc7a17",
     bscTestnet: "0x6725f303b657a9451d8ba641348b6761a6cc7a17",
