@@ -39,10 +39,10 @@ const eth: NetworkUserConfig = {
 };
 
 const arb_sepolia: NetworkUserConfig = {
-  url: 'https://arbitrum-sepolia.infura.io/v3/1c177df366ef47b689e8b84ee6c7297d',
+  url: "https://arbitrum-sepolia.infura.io/v3/1c177df366ef47b689e8b84ee6c7297d",
   chainId: 421614,
   accounts: [process.env.KEY_ARB_SEPOLIA!],
-}
+};
 
 const config = {
   defaultNetwork: "hardhat",
@@ -57,7 +57,17 @@ const config = {
     // mainnet: bscMainnet,
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: { arb_sepolia: process.env.ETHERSCAN_API_KEY},
+    customChains: [
+      {
+        network: "arb_sepolia",
+        chainId: 421614,
+        urls: {
+          apiURL: "https://api-sepolia.arbiscan.io/api",
+          browserURL: "https://sepolia.arbiscan.io",
+        },
+      },
+    ],
   },
   solidity: {
     compilers: [
