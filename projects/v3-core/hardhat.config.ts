@@ -74,6 +74,12 @@ const eth: NetworkUserConfig = {
   accounts: [process.env.KEY_ETH!],
 }
 
+const arb_sepolia: NetworkUserConfig = {
+  url: 'https://arbitrum-sepolia.infura.io/v3/1c177df366ef47b689e8b84ee6c7297d',
+  chainId: 421614,
+  accounts: [process.env.KEY_ARB_SEPOLIA!],
+}
+
 export default {
   networks: {
     hardhat: {
@@ -83,6 +89,7 @@ export default {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_ARB_SEPOLIA && { arb_sepolia }),
     // mainnet: bscMainnet,
   },
   etherscan: {

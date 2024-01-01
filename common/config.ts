@@ -9,6 +9,16 @@ export const configs = {
     // cake: '0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898',
     // smartRouterHelper: '0xdAecee3C08e953Bd5f89A5Cc90ac560413d709E3',
   },
+  arb_sepolia: {
+    WNATIVE: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+    nativeCurrencyLabel: 'ETH',
+    cake: '0x0000000000000000000000000000000000000000',
+    // v2Factory: '0x1097053Fd2ea711dad45caCcc45EfF7548fCB362',
+    // stableFactory: '0x0000000000000000000000000000000000000000',
+    // stableInfo: '0x0000000000000000000000000000000000000000',
+    // cake: '0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898',
+    // smartRouterHelper: '0xdAecee3C08e953Bd5f89A5Cc90ac560413d709E3',
+  },
   goerli: {
     WNATIVE: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
     nativeCurrencyLabel: 'GOR',

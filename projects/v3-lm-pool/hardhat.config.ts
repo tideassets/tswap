@@ -30,6 +30,12 @@ const eth: NetworkUserConfig = {
   accounts: [process.env.KEY_ETH!],
 }
 
+const arb_sepolia: NetworkUserConfig = {
+  url: 'https://arbitrum-sepolia.infura.io/v3/1c177df366ef47b689e8b84ee6c7297d',
+  chainId: 421614,
+  accounts: [process.env.KEY_ARB_SEPOLIA!],
+}
+
 const config: HardhatUserConfig = {
   solidity: {
     version: '0.7.6',
@@ -40,6 +46,7 @@ const config: HardhatUserConfig = {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_ARB_SEPOLIA && { arb_sepolia }),
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
