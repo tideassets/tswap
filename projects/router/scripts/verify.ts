@@ -12,6 +12,7 @@ async function main() {
   const deployedContracts_v3_core = await import(`@tideswap/v3-core/deployments/${networkName}.json`)
   const deployedContracts_v3_periphery = await import(`@tideswap/v3-periphery/deployments/${networkName}.json`)
   const deployedContracts_smart_router = await import(`@tideswap/smart-router/deployments/${networkName}.json`)
+  const deployedContracts_masterchef = await import(`@tideswap/masterchef-v3/deployments/${networkName}.json`)
 
   // Verify SmartRouterHelper
   console.log('Verify SmartRouterHelper')
@@ -21,12 +22,12 @@ async function main() {
   // Verify swapRouter
   console.log('Verify swapRouter')
   await verifyContract(deployedContracts_smart_router.SmartRouter, [
-    config.v2Factory,
+    deployedContracts_smart_router.FactoryV2,
     deployedContracts_v3_core.PancakeV3PoolDeployer,
     deployedContracts_v3_core.PancakeV3Factory,
     deployedContracts_v3_periphery.NonfungiblePositionManager,
-    config.stableFactory,
-    config.stableInfo,
+    deployedContracts_masterchef.StableSwapFactory,
+    deployedContracts_masterchef.StableSwapInfo,
     config.WNATIVE,
   ])
   await sleep(10000)
@@ -36,8 +37,8 @@ async function main() {
   await verifyContract(deployedContracts_smart_router.MixedRouteQuoterV1, [
     deployedContracts_v3_core.PancakeV3PoolDeployer,
     deployedContracts_v3_core.PancakeV3Factory,
-    config.v2Factory,
-    config.stableFactory,
+    deployedContracts_smart_router.FactoryV2,
+    deployedContracts_masterchef.StableSwapFactory,
     config.WNATIVE,
   ])
   await sleep(10000)
@@ -54,7 +55,7 @@ async function main() {
   // Verify tokenValidator
   console.log('Verify tokenValidator')
   await verifyContract(deployedContracts_smart_router.TokenValidator, [
-    config.v2Factory,
+    deployedContracts_smart_router.FactoryV2,
     deployedContracts_v3_periphery.NonfungiblePositionManager,
   ])
   await sleep(10000)
